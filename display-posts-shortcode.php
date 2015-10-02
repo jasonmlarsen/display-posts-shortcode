@@ -410,7 +410,7 @@ function be_display_posts_shortcode( $atts ) {
 		if( $include_content ) {
 			add_filter( 'shortcode_atts_display-posts', 'be_display_posts_off', 10, 3 );
 			/** This filter is documented in wp-includes/post-template.php */
-			$content = '<div class="content">' . apply_filters( 'the_content', get_the_content() ) . '</div>';
+			$content = '<div class="entry-content">' . apply_filters( 'the_content', get_the_content() ) . '</div>';
 			remove_filter( 'shortcode_atts_display-posts', 'be_display_posts_off', 10, 3 );
 		}
 		
